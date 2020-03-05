@@ -1,0 +1,34 @@
+{
+  "name": "evaluation-template",
+  "version": "0.0.1",
+  "description": "This is a template repository to create test-ware for evaluating certain (JS) test automation tools.",
+  "main": "-",
+  "scripts": {
+    "test": "echo \"No tests defined\" && exit 1",
+    "lint": "eslint tests --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szikszail/evaluation-template.git"
+  },
+  "keywords": [
+    "Test",
+    "automation",
+    "Tool",
+    "Evaluation",
+    "JavaScript"
+  ],
+  "author": "Laszlo Szikszai <sziklaszlo@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/szikszail/evaluation-template/issues"
+  },
+  "homepage": "https://github.com/szikszail/evaluation-template#readme",
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "husky": "^4.0.10"
+  },
+  "husky": {
+    "precommit": "npm run lint"
+  }
+}
