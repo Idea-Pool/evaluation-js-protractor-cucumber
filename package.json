@@ -1,15 +1,16 @@
 {
-  "name": "evaluation-template",
+  "name": "evaluation-js-protractor-cucumber",
   "version": "0.0.1",
-  "description": "This is a template repository to create test-ware for evaluating certain (JS) test automation tools.",
+  "description": "This is a test-ware for evaluation of Protractor + Cucumber test automation tools.",
   "main": "-",
   "scripts": {
+    "build": "npm install",
     "test": "echo \"No tests defined\" && exit 1",
     "lint": "eslint tests --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/szikszail/evaluation-template.git"
+    "url": "git+https://github.com/Idea-Pool/evaluation-js-protractor-cucumber.git"
   },
   "keywords": [
     "Test",
@@ -18,17 +19,15 @@
     "Evaluation",
     "JavaScript"
   ],
-  "author": "Laszlo Szikszai <sziklaszlo@gmail.com>",
+  "author": "Adrian Benko <benko.adrian@gmail.com>",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/szikszail/evaluation-template/issues"
+    "url": "https://github.com/Idea-Pool/evaluation-js-protractor-cucumber/issues"
   },
-  "homepage": "https://github.com/szikszail/evaluation-template#readme",
+  "homepage": "https://github.com/Idea-Pool/evaluation-js-protractor-cucumber#readme",
   "dependencies": {
     "eslint": "^6.8.0",
-    "husky": "^4.0.10"
-  },
-  "husky": {
-    "precommit": "npm run lint"
+    "cucumber": "^6.0.5",
+    "protractor": "^7.0.0"
   }
 }
