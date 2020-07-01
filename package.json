@@ -4,8 +4,9 @@
   "description": "This is a test-ware for evaluation of Protractor + Cucumber test automation tools.",
   "main": "-",
   "scripts": {
-    "build": "npm install",
-    "test": "echo \"No tests defined\" && exit 1",
+    "build": "npm install && webdriver-manager update",
+    "test": "protractor protractor.conf.js",
+    "testAngular": "protractor protractor.conf.js --tags @angular",
     "lint": "eslint tests --fix"
   },
   "repository": {
@@ -26,8 +27,11 @@
   },
   "homepage": "https://github.com/Idea-Pool/evaluation-js-protractor-cucumber#readme",
   "dependencies": {
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "cucumber": "^6.0.5",
-    "protractor": "^7.0.0"
+    "jasmine-spec-reporter": "^5.0.2",
+    "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^6.2.1"
   }
 }
