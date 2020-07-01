@@ -1,5 +1,6 @@
-const {Before, Given, When, Then} = require('cucumber');
-const { browser} = require('protractor');
+const { Given, When, Then, setDefaultTimeout} = require('cucumber');
+setDefaultTimeout(60 * 1000);
+const { browser, protractor} = require('protractor');
 const { expect } = require('chai');
 let EC = protractor.ExpectedConditions;
 let angularHomePage = require('../pages/AngularHomePage');
@@ -41,49 +42,33 @@ Then('the title on the content should be {string}', async function (expectedTitl
     expect(await angularStartPage.getTitleOfThePage()).to.equal(expectedTitle);
 });
 
-Then('Search input in the top navbar should be visible', function () {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+Then('Search input in the top navbar should be visible', async function () {
+    expect(await angularHomePage.isAngularElementVisible(angularHomePage.searchInput)).to.be.true;
 });
 
-Then('it should be empty', function () {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+Then('it should be empty', async function () {
+    expect(await angularHomePage.getSearchInputAttribute('value')).to.equal('');
 });
 
-Then('it should be {string} as placeholder', function (string) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+Then('it should be {string} as placeholder', async function (expectedPlaceholder) {
+    expect(await angularHomePage.getSearchInputAttribute('placeholder')).to.equal(expectedPlaceholder);
 });
 
 When('it is clicked in', function () {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+    angularHomePage.searchInput.click();
 });
 
-When('{string} is typed in it', function (string) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+When('{string} is typed in it', function (searchTerm) {
+    angularHomePage.enterSearchText(searchTerm);
 });
 
-Then('clear icon should be visible in it', function () {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+Then('{string} should be listed in the API section', async function (searchTerm) {
+    const searchResults = await angularHomePage.getTextInApiSection();
+    expect(searchResults.indexOf(searchTerm) !== -1).to.be.true;
 });
 
-Then('{string} should be listed in the {string} section', function (string, string2) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
-});
-
-When('{string} is clicked in the {string} section', function (string, string2) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
-});
-
-Then('the URL should be https:\/\/angular.io\/api\/core\/Directive', function () {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+When('{string} is clicked in the {string} section', function (searchItem, string2) {
+    angularHomePage.clickOnResultName(searchItem);
 });
 
 //Given('https://getbootstrap.com/docs/{float}/components/forms URL is opened', function (float) {

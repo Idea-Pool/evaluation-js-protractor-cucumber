@@ -11,15 +11,14 @@ Feature: This feature will check the basic capabilities of the Protractor framew
     Then the URL should be "https://angular.io/docs"
     And the title on the content should be "Introduction to the Angular Docs"
 
-#  Scenario: Checking search field on landing page
-#    Given https://angular.io URL is opened
-#    Then Search input in the top navbar should be visible
-#    And it should be empty
-#    And it should be "Search" as placeholder
-#    When it is clicked in
-#    And "directive" is typed in it
-#    Then clear icon should be visible in it
-#    And "Directive" should be listed in the "API" section
-#    When "Directive" is clicked in the "API" section
-#    Then the URL should be https://angular.io/api/core/Directive
-#    And the title on the content should be "Directive"
+  Scenario: Checking search field on landing page
+    Given "https://angular.io" URL is opened
+    Then Search input in the top navbar should be visible
+    And it should be empty
+    And it should be "Search" as placeholder
+   When it is clicked in
+   And "directive" is typed in it
+    And "Directive" should be listed in the API section
+    When "Directive" is clicked in the "API" section
+    Then the URL should be "https://angular.io/api/core/Directive"
+   And the title on the content should be "Directive"
