@@ -5,8 +5,9 @@
   "main": "-",
   "scripts": {
     "build": "npm install && webdriver-manager update",
-    "test": "protractor protractor.conf.js",
-    "testAngular": "protractor protractor.conf.js --tags @angular",
+    "test": "protractor protractorBootstrap.conf.js",
+    "testAngular": "protractor protractorAngular.conf.js --tags @angular",
+    "testBootstrap": "protractor protractorBootstrap.conf.js --tags \"@bootstrap\"",
     "lint": "eslint tests --fix"
   },
   "repository": {

@@ -16,7 +16,7 @@ exports.config = {
         require: [
             './src/steps/*.js'
         ],
-        tags: [],
+        tags: '@bootstrap',
         dryRun: false
     },
 
@@ -26,13 +26,13 @@ exports.config = {
         browserName: 'chrome'
     },
     directConnect: true,
-    baseUrl: 'http://localhost:4200/',
     jasmineNodeOpts: {
         showColors: true,
         defaultTimeoutInterval: 30000
     },
-    onPrepare: function() {
+    onPrepare: async function() {
         // maximize the browser before executing the feature files
         browser.manage().window().maximize();
+        await browser.waitForAngularEnabled(false);
     }
 };

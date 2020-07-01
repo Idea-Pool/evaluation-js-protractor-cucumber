@@ -1,5 +1,6 @@
-#Feature: This feature will check the basic capabilities of the Protractor framework on getbootstrap.com site
-#
+@bootstrap
+Feature: This feature will check the basic capabilities of the Protractor framework on getbootstrap.com site
+
 #Scenario: Checking form elements
 #Given "https://getbootstrap.com/docs/4.4/components/forms/" URL is opened
 #Then title of the browser should be "Forms · Bootstrap"
@@ -13,7 +14,7 @@
 #Then The default checkbox should be enabled
 #And The disabled checkbox should be disabled
 #And The default checkbox should be unchecked
-#When The default chdckbox is clicked on
+#When The default checkbox is clicked on
 #Then The default checkbox should be checked
 #
 #Scenario: Interaction with radio form elements
@@ -32,14 +33,14 @@
 #And The primary button should be disabled
 #When the page is scrolled down 1 page
 #Then The active primary link button should not be disabled
-#
-#Scenario: Checking select form elements
-#Given "https://getbootstrap.com/docs/4.4/components/forms/#form-controls" URL is opened
-#Then The example select should be visible
-#And The example multiple select should be a multiple select
-#And The selected option in example select should be "1"
-#And there should not be option like "hello" in example select
-#And there should be option like "2" in example select
-#When The option "2" is selected in example select
-#Then The selected option in example select should be "2"
-#And Thu number of options in example select should be 5
+
+Scenario: Checking select form elements
+Given "https://getbootstrap.com/docs/4.4/components/forms/#form-controls" URL is opened
+Then The example select should be visible
+And The example multiple select should be a multiple select
+And The selected option in example select should be "1"
+And there should not be option like "hello" in example select
+And there should be option like "2" in example select
+When The option "2" is selected in example select
+Then The selected option in example select should be "2"
+And The number of options in example select should be 5
