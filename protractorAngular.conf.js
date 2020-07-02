@@ -26,7 +26,6 @@ exports.config = {
         browserName: 'chrome'
     },
     directConnect: true,
-    baseUrl: 'http://localhost:4200/',
     jasmineNodeOpts: {
         showColors: true,
         defaultTimeoutInterval: 30000
@@ -34,6 +33,5 @@ exports.config = {
     onPrepare: async function() {
         // maximize the browser before executing the feature files
         browser.manage().window().maximize();
-        await browser.waitForAngularEnabled(true);
     }
 };

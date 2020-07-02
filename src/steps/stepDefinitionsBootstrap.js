@@ -89,36 +89,3 @@ When('the page is scrolled down {int} page', function (int) {
 Then('The active primary link button should not be disabled', async function () {
     expect(await bootstrapFormsPage.getAttributeOfElement(bootstrapFormsPage.activePrimaryLink('Primary link'), 'disabled')).to.be.null;
 });
-
-Then('The example select should be visible', async function () {
-expect(await bootstrapFormsPage.exampleSelect.isDisplayed()).to.be.true;
-});
-
-Then('The example multiple select should be a multiple select', async function () {
-    expect(await bootstrapFormsPage.getAttributeOfElement(bootstrapFormsPage.exampleMultiSelect, 'multiple')).to.equal('true');
-});
-
-Then('The selected option in example select should be {string}', async function (expectedValue) {
-    expect(await bootstrapFormsPage.getAttributeOfElement(bootstrapFormsPage.exampleSelect, 'value')).to.equal(expectedValue);
-});
-
-Then('there should not be option like {string} in example select', async function (expectedOption) {
-let allOptions = await bootstrapFormsPage.isOptionAvailableInSelect(expectedOption);
-
-});
-
-Then('there should be option like {string} in example select', function (string) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
-});
-
-When('The option {string} is selected in example select', function (string) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
-});
-
-Then('Thu number of options in example select should be {int}', function (int) {
-    // Then('Thu number of options in example select should be {float}', function (float) {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
-});

@@ -16,9 +16,20 @@ Feature: This feature will check the basic capabilities of the Protractor framew
     Then Search input in the top navbar should be visible
     And it should be empty
     And it should be "Search" as placeholder
-   When it is clicked in
-   And "directive" is typed in it
+    When it is clicked in
+    And "directive" is typed in it
     And "Directive" should be listed in the API section
     When "Directive" is clicked in the "API" section
     Then the URL should be "https://angular.io/api/core/Directive"
-   And the title on the content should be "Directive"
+    And the title on the content should be "Directive"
+
+  Scenario: Checking select form elements
+    Given "https://docs.angularjs.org/api/ng/directive/select#simple-select-elements-with-static-options" URL is opened
+    Then The example select should be visible
+    And The example multiple select should be a multiple select
+    And The selected option in example select should be "null"
+    And there should not be option like "hello" in example select
+    And there should be option like "option-2" in example select
+    When The option "Option 2" is selected in example select
+    Then The selected option in example select should be "option-2"
+    And The number of options in example select should be 2

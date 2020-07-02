@@ -33,14 +33,3 @@ Feature: This feature will check the basic capabilities of the Protractor framew
 #And The primary button should be disabled
 #When the page is scrolled down 1 page
 #Then The active primary link button should not be disabled
-
-Scenario: Checking select form elements
-Given "https://getbootstrap.com/docs/4.4/components/forms/#form-controls" URL is opened
-Then The example select should be visible
-And The example multiple select should be a multiple select
-And The selected option in example select should be "1"
-And there should not be option like "hello" in example select
-And there should be option like "2" in example select
-When The option "2" is selected in example select
-Then The selected option in example select should be "2"
-And The number of options in example select should be 5

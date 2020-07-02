@@ -15,10 +15,6 @@ const BootstrapFormsPage = function () {
         this.disabledPrimaryButton = (buttonName) => element(by.buttonText(`${buttonName}`));
         this.activePrimaryLink = (linkName) => element(by.linkText(`${linkName}`));
 
-        this.exampleSelect = element(by.id('exampleFormControlSelect1'));
-        this.exampleMultiSelect = element(by.id('exampleFormControlSelect2'));
-
-
         this.isReadOnlyInputVisible = function () {
                 return browser.wait(EC.visibilityOf(this.readOnlyInput), 1000);
         };
@@ -30,14 +26,6 @@ const BootstrapFormsPage = function () {
         this.isFormElementSelected = function(checkboxName) {
                 return checkboxName.isSelected();
         };
-
-        this.isOptionAvailableInSelect = function(optionName) {
-                let allOptions = element.all(by.xpath('//select[@id="exampleFormControlSelect1"]/option'));
-                allOptions.then(function (actualItem) {
-                        console.log(actualItem.getText())
-                })
-                return allOptions;
-        }
 };
 
 module.exports = new BootstrapFormsPage();
