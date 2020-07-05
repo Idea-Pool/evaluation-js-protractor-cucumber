@@ -7,8 +7,7 @@
     "build": "npm install && webdriver-manager update",
     "test": "protractor protractorBootstrap.conf.js",
     "testAngular": "protractor protractorAngular.conf.js --tags @angular",
-    "testBootstrap": "protractor protractorBootstrap.conf.js --tags \"@bootstrap\"",
-    "lint": "eslint tests --fix"
+    "testBootstrap": "protractor protractorBootstrap.conf.js --tags \"@bootstrap\""
   },
   "repository": {
     "type": "git",
@@ -29,7 +28,6 @@
   "homepage": "https://github.com/Idea-Pool/evaluation-js-protractor-cucumber#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "eslint": "^6.8.0",
     "cucumber": "^6.0.5",
     "jasmine-spec-reporter": "^5.0.2",
     "protractor": "^7.0.0",
