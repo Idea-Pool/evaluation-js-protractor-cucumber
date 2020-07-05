@@ -3,13 +3,13 @@ let EC = protractor.ExpectedConditions;
 
 const AngularHomePage = function () {
 
-    this.angularLogoNavbar = element(by.className('ng-star-inserted'));
+    this.angularLogoNavbar = element(by.css('img.ng-star-inserted'));
     this.angularLogoHeroSection = element(by.css('.hero-logo img'));
     const textInHeroSection = element(by.css('div.hero-headline'));
     this.getStartedButton = element(by.className('button hero-cta'));
     this.searchInput = element(by.css('input[type="search"]'));
 
-    this.apiSection = element(by.xpath('//h3[contains(text(), \'api\')]/../ul/li'));
+    this.apiSection = element(by.xpath('(//h3[contains(text(), \'api\')]/../ul/li)[1]'));
 
     this.exampleSelect = element(by.model('data.singleSelect'));
     this.exampleMultiSelect = element(by.model('data.multipleSelect'));
@@ -48,7 +48,8 @@ const AngularHomePage = function () {
     };
 
     this.isOptionAvailableInSelect = async function (testedOption) {
-        let allOptions = await this.exampleSelect.all(by.tagName('option')).getAttribute('value');
+        let allOptions = await this.exampleSelect.all(
+            by.tagName('option')).getAttribute('value');
         return allOptions.includes(testedOption);
     };
 

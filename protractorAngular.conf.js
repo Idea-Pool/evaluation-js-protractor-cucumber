@@ -11,7 +11,8 @@ exports.config = {
     cucumberOpts: {
         strict: true,
         format: [
-            'progress'
+            'pretty',
+            'node_modules/cucumber-pretty'
         ],
         require: [
             './src/steps/*.js'
@@ -32,6 +33,6 @@ exports.config = {
     },
     onPrepare: async function() {
         // maximize the browser before executing the feature files
-        browser.manage().window().maximize();
+       // browser.manage().window().maximize();
     }
 };

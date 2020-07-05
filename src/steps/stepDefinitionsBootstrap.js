@@ -1,8 +1,7 @@
-const { Given, When, Then, setDefaultTimeout} = require('cucumber');
+const { When, Then, setDefaultTimeout} = require('cucumber');
 setDefaultTimeout(60 * 1000);
-const { browser, protractor} = require('protractor');
+const { browser} = require('protractor');
 const { expect } = require('chai');
-let EC = protractor.ExpectedConditions;
 let bootstrapFormsPage = require('../pages/bootstrapFormsPage');
 
 Then('title of the browser should be {string}', async function (expectedTitle) {
