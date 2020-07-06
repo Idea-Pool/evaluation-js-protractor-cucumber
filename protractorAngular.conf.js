@@ -1,4 +1,4 @@
-const { SpecReporter } = require('jasmine-spec-reporter');
+const reporter = require('cucumber-html-reporter');
 
 exports.config = {
     framework: 'custom',
@@ -11,6 +11,7 @@ exports.config = {
     cucumberOpts: {
         strict: true,
         format: [
+            'json:./reports/results.json',
             'pretty',
             'node_modules/cucumber-pretty'
         ],
@@ -31,8 +32,17 @@ exports.config = {
         showColors: true,
         defaultTimeoutInterval: 30000
     },
-    onPrepare: async function() {
-        // maximize the browser before executing the feature files
-       // browser.manage().window().maximize();
+
+    afterLaunch() {
+        const options = {
+            columnLayout: 1,
+            theme: 'bootstrap',
+            jsonFile: './reports/results.json',
+            output: './reports/cucumber_report.html',
+            reportSuiteAsScenarios: true,
+            scenarioTimestamp: true,
+            launchReport: true,
+        };
+        reporter.generate(options);
     }
 };

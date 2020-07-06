@@ -1,0 +1,446 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "This feature will check the basic capabilities of the Protractor framework on Angular.IO site",
+    "line": 2,
+    "id": "this-feature-will-check-the-basic-capabilities-of-the-protractor-framework-on-angular.io-site",
+    "tags": [
+      {
+        "name": "@angular",
+        "line": 1
+      }
+    ],
+    "uri": "src/specs/angular.feature",
+    "elements": [
+      {
+        "id": "this-feature-will-check-the-basic-capabilities-of-the-protractor-framework-on-angular.io-site;checking-landing-pages-elements",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Checking landing pages elements",
+        "tags": [
+          {
+            "name": "@angular",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "\"https://angular.io\" URL is opened",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1425000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Angular logo in the top navbar should be visible",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1696000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "Angular logo in the hero section should be visible",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "text in hero section should be \"One framework.Mobile & desktop.\"",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Get started button should be visible in the hero section",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Get started button is clicked in the hero section",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "the URL should be \"https://angular.io/docs\"",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1118000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "the title on the content should be \"Introduction to the Angular Docs\"",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "this-feature-will-check-the-basic-capabilities-of-the-protractor-framework-on-angular.io-site;checking-search-field-on-landing-page",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Checking search field on landing page",
+        "tags": [
+          {
+            "name": "@angular",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "\"https://angular.io\" URL is opened",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 949000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "Search input in the top navbar should be visible",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1670000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "it should be empty",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "it should be \"Search\" as placeholder",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "it is clicked in",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "\"directive\" is typed in it",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "\"Directive\" should be listed in the API section",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 945000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "\"Directive\" is clicked in the \"API\" section",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "the URL should be \"https://angular.io/api/core/Directive\"",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 951000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "the title on the content should be \"Directive\"",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 110000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "this-feature-will-check-the-basic-capabilities-of-the-protractor-framework-on-angular.io-site;checking-select-form-elements",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Checking select form elements",
+        "tags": [
+          {
+            "name": "@angular",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "\"https://docs.angularjs.org/api/ng/directive/select#simple-select-elements-with-static-options\" URL is opened",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1344000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "The example select should be visible",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 698000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "The example multiple select should be a multiple select",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "The selected option in example select should be \"null\"",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "there should not be option like \"hello\" in example select",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "there should be option like \"option-2\" in example select",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "The option \"Option 2\" is selected in example select",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "The selected option in example select should be \"option-2\"",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "The number of options in example select should be 2",
+            "match": {
+              "location": "src/steps/stepDefinitionsAngular.js:99"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

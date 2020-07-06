@@ -1,7 +1,7 @@
-const { When, Then, setDefaultTimeout} = require('cucumber');
+const {When, Then, setDefaultTimeout} = require('cucumber');
 setDefaultTimeout(60 * 1000);
-const { browser} = require('protractor');
-const { expect } = require('chai');
+const {browser} = require('protractor');
+const {expect} = require('chai');
 let bootstrapFormsPage = require('../pages/bootstrapFormsPage');
 
 Then('title of the browser should be {string}', async function (expectedTitle) {
@@ -74,7 +74,7 @@ Then('The second default radio should be selected', async function () {
 });
 
 Then('There should be a button with text {string}', async function (buttonName) {
-expect(await bootstrapFormsPage.disabledPrimaryButton(buttonName).isDisplayed());
+    expect(await bootstrapFormsPage.disabledPrimaryButton(buttonName).isDisplayed());
 });
 
 Then('The primary button should be disabled', async function () {
